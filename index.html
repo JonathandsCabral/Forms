@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formuláro</title>
+</head>
+<body>
+    <div class="forms1">
+                
+        <form method="post" action="dados.php">
+
+            <span class="form2">Nome:</span> <br>
+            <input type="text" name="nome" placeholder="Insira seu nome" required> <br> <br>
+
+
+            <span class="form2">E-mail:</span> <br>
+            <input type="email" name="comment" placeholder="example@email.com" required> <br> <br>
+
+
+            <span class="form2">Celular:</span> <br>
+            <input type="phone" name="phone" placeholder="(DDD) 00000-0000" required> <br> <br>
+
+
+            <span class="form2">Senha:</span> <br>
+            <input type="password" name="senha" id="senha" placeholder="Senha (min: 6  caracteres)" required>
+            <input type="password" name="senha1" id="senha1" placeholder="Confirme a senha" required> <br> <br>
+            
+
+            <button type="submit" onclick="return validarSenha()"class="botao1">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        let senha = document.getElementById('senha');
+        let senha1 = document.getElementById('senha1');
+
+        function validarSenha() {
+            if (senha.value != senha1.value) {
+
+                senha1.setCustomValidity("Senhas diferentes!");
+                senha1.reportValidity();
+                return false;
+            } else {
+                senha1.setCustomValidity("");
+                return true;
+            }
+        }
+
+        senha1.addEventListener('input', validarSenha);
+    </script>
+</body>
+</html>

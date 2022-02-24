@@ -1,0 +1,28 @@
+body {
+    margin-top: 250px;
+    background: url("img/fundo.png");
+}
+
+.forms1 {
+    background: rgb(114, 114, 80);
+    text-align: left;
+    color: rgb(29, 29, 22);
+    margin: 0 auto;
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.botao1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.forms1 input {
+    height: 30px;
+    margin-top: 10px;
+}
